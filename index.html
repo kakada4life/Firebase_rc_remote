@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Firebase Rover Controller</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="controller-container">
+    <div class="header">
+      <h1>
+        <img src="rupp.png" alt="Rover Logo" class="rover-logo" />
+        Rover Control
+      </h1>
+      <div id="connectionStatus" class="connection-status disconnected">
+        🔴 Connecting to Firebase...
+      </div>
+    </div>
+
+    <div class="device-selector">
+      <select id="deviceSelect" class="device-select">
+        <option value="">Select a device...</option>
+      </select>
+      <input type="text" id="userIdInput" class="user-input" placeholder="Enter your name or ID (e.g., John, Player1, etc.)" required />
+      <button id="connectBtn" class="connect-btn">Connect to Device</button>
+    </div>
+
+    <div id="controlsSection" class="controls-section">
+      <div class="status-display">
+        <div class="status-item">
+          <span class="status-label">Device:</span>
+          <span class="status-value" id="currentDevice">None</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Controller:</span>
+          <span class="status-value" id="currentController">None</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Status:</span>
+          <span class="status-value" id="roverStatus">Waiting...</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Last Command:</span>
+          <span class="status-value" id="lastCommand">None</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Movement:</span>
+          <span class="status-value" id="currentMovement">Unknown</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Arduino Status:</span>
+          <span class="status-value" id="arduinoStatus">Waiting...</span>
+        </div>
+      </div>
+
+      <div class="controls-grid">
+        <!-- Row 1 -->
+        <div></div>
+        <button class="control-btn" data-command="F" id="forward-btn">
+          ⬆️<br />FORWARD
+        </button>
+        <div></div>
+
+        <!-- Row 2 -->
+        <button class="control-btn" data-command="L" id="left-btn">
+          ⬅️<br />LEFT
+        </button>
+        <button class="control-btn placeholder" id="stop-btn"></button>
+        <button class="control-btn" data-command="R" id="right-btn">
+          ➡️<br />RIGHT
+        </button>
+
+        <!-- Row 3 -->
+        <button class="control-btn diagonal" data-command="FL" id="fl-btn">
+          ↖️<br />FWD-L
+        </button>
+        <button class="control-btn" data-command="B" id="backward-btn">
+          ⬇️<br />BACKWARD
+        </button>
+        <button class="control-btn diagonal" data-command="FR" id="fr-btn">
+          ↗️<br />FWD-R
+        </button>
+      </div>
+
+      <div class="speed-controls">
+        <div class="speed-label">Motor Speed Control</div>
+        <div class="speed-display" id="speedDisplay">255</div>
+        <div class="speed-buttons">
+          <button class="speed-btn" data-command="SPEED_DOWN" title="Decrease Speed">−</button>
+          <button class="speed-btn" data-command="SPEED_UP" title="Increase Speed">+</button>
+        </div>
+      </div>
+
+      <div class="test-controls">
+        <button class="test-btn" id="testBtn">Test Command</button>
+        <button class="test-btn" id="testSpeedBtn">Test Speed</button>
+        <button class="test-btn" id="disconnectBtn">Disconnect</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
