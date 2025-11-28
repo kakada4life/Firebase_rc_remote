@@ -8,8 +8,8 @@
 #define WIFI_PASSWORD "pass"
 
 // Firebase project credentials
-#define API_KEY "AIzaSyCiz6UMdlXMS1X__EM1z8HT1we0uK3E7Ko"
-#define DATABASE_URL "https://rccontroller-977ef-default-rtdb.firebaseio.com/"
+#define API_KEY "API"
+#define DATABASE_URL "DB-url-in-firebase"
 
 // Device configuration
 #define DEVICE_ID "rover1"
