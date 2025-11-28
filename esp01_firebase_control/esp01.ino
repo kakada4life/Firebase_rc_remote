@@ -4,10 +4,6 @@
 #include <addons/TokenHelper.h>
 #include <addons/RTDBHelper.h>
 
-// WiFi credentials
-//#define WIFI_SSID "Rath"
-//#define WIFI_PASSWORD "@@##rath2025@2m"
-
 #define WIFI_SSID "name"
 #define WIFI_PASSWORD "pass"
 
