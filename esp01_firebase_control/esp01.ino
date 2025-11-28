@@ -8,8 +8,8 @@
 //#define WIFI_SSID "Rath"
 //#define WIFI_PASSWORD "@@##rath2025@2m"
 
-#define WIFI_SSID "HUAWEI-TEST"
-#define WIFI_PASSWORD "@1234567890@abc@"
+#define WIFI_SSID "name"
+#define WIFI_PASSWORD "pass"
 
 // Firebase project credentials
 #define API_KEY "AIzaSyCiz6UMdlXMS1X__EM1z8HT1we0uK3E7Ko"
